@@ -3,6 +3,8 @@
 **Carter Steenhard · Daniel Mccubbins · Pruthviraj Sadhankar**  
 University of Kansas — EECS 690, Human–Robot Interaction
 
+**[View the rendered paper](paper.pdf)**
+
 Does a NAO robot remaining in the room during a post-interaction survey affect participants' survey responses?
 
 ![Watercolor concept illustration of a participant completing a survey with NAO present on the left and absent on the right.](say-it-to-my-face-banner.png)
@@ -15,7 +17,7 @@ The paper is in `main.tex`; bibliography entries belong in `references.bib`. The
 
 For collaborative editing, download this repository as a ZIP using **Code → Download ZIP**, upload it through **Overleaf → New Project → Upload Project**, and invite teammates through **Share**. Use `main.tex` as the main document. Changes in Overleaf and GitHub are not automatically synchronized.
 
-Keep `say-it-to-my-face-banner.png` alongside `main.tex` so the full-width teaser image loads. Overleaf and a complete local TeX installation can compile the project. GitHub displays this README and image; it displays `.tex` files as source rather than rendering the paper as a PDF.
+Keep `say-it-to-my-face-banner.png` alongside `main.tex` so the full-width teaser image loads. Overleaf and a complete local TeX installation can compile the project. GitHub displays the compiled `paper.pdf` directly. This PDF is a snapshot; recompile and upload it after changing the source.
 
 ## Course requirements
 
