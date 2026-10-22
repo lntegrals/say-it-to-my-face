@@ -25,4 +25,4 @@ Keep `say-it-to-my-face-banner.png` alongside `main.tex` so the full-width tease
 - [ACM template](https://www.acm.org/publications/proceedings-template)
 - [Course GenAI policy](https://people.eecs.ku.edu/~s299s471/eecs690_hri_fa_2026/syllabus.html)
 
-OpenAI Codex assisted source identification, Background drafting and revision, and LaTeX preparation. The watercolor banner was generated with OpenAI image generation using the team's description and supplied NAO reference images. The generation prompt is in `banner-generation.txt`. Keep the paper's GenAI disclosure current as work continues.
+OpenAI Codex assisted source identification, Background revision, and LaTeX preparation. The watercolor banner was generated with OpenAI image generation using the team's description and supplied NAO reference images. The generation prompt is in `banner-generation.txt`. Keep the paper's GenAI disclosure current as work continues.
