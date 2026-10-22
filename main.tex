@@ -5,8 +5,9 @@
 % Assignment: https://people.eecs.ku.edu/~s299s471/eecs690_hri_fa_2026/project.html#update1
 \settopmatter{printacmref=false}
 \setcopyright{none}
+\setlength{\emergencystretch}{1em}
 \newcommand{\placeholder}[1]{\textit{[#1]}}
-% Drafting layout: seven body pages plus a separate references page.
+% Drafting layout: extra space remains in unfinished sections.
 % Switch to \draftspacingfalse when prose should determine the page count.
 \newif\ifdraftspacing
 \draftspacingtrue
@@ -44,16 +45,33 @@
 
 \section{Introduction}
 \label{sec:introduction}
-\placeholder{Problem, importance, novelty, and study overview.}
-\draftspace{30mm}
+The field of Human-Robot Interaction (HRI) has expanded rapidly in recent years, with applications ranging from healthcare assistance to educational companions. As the integration of social robots into human environments grows, rigorous evaluation methods become paramount to ensure that user experience data accurately reflects the technology's true performance and impact \cite{fong2003}. Most HRI studies rely heavily on self-reported data, such as post-interaction questionnaires, to measure constructs like trust, likability, and competence. However, the reliability of these quantitative and qualitative measures is frequently influenced by contextual factors that may not be adequately controlled during the data collection phase which could result in significant differences in findings.
+
+A significant, yet often overlooked, variable in this evaluation process is the physical presence of the robot during the debriefing or survey phase. While prior work has extensively documented the effect of robot behavior during the interaction itself such as gaze, voice, and responsiveness \cite{nass2000} few studies have investigated how the immediate physical environment during post-interaction evaluation might induce psychological bias. It is well established in human-computer interaction (HCI) that the presence of a "judge" or an observer can alter respondent behavior \cite{nass1999}. We argue that in the context of HRI, the robot acts not only as an agent but also as a persistent physical artifact. When a participant is asked to evaluate a robot that is sitting silently in the room, the social dynamic differs from when the participant is alone with a tablet or laptop.
+
+This research addresses a gap in methodological rigor by investigating whether robot presence during post-study interviews biases how participants respond to live questionnaires. Specifically, we focus on psychological bias introduced by the social presence of the Robot. While Wizard-of-Oz (WoZ) techniques are common for controlling interaction variables \cite{riek2012}, the environmental context of the final evaluation is rarely standardized. If a robot's mere presence inflates positive feedback or suppresses critical feedback, the validity of comparative HRI studies may be compromised.
+
+To address this, we will conduct a controlled between-subjects experiment using the Nao robot. Participants will undergo a trivia game activity controlled via WoZ to ensure consistency in the experience. The key variable will not be until the post-interaction survey phase where one group will complete the questionnaire with the Nao robot physically present and active in the room, while the control group will complete it in the robot's absence. By measuring Likert-scale ratings and open-ended responses across these conditions, we aim to determine if perceived presence alters data validity. We will then have an interview with the participant to better allow the participant to express their feelings in regards to the experiment. If confirmed, our findings will help standardize the optimal degree of robot presence for future studies, ensuring that HRI evaluations reflect genuine user sentiment rather than artifact-induced social pressure.
 \draftpage
 
 \section{Background}
 \label{sec:background}
-\placeholder{Related work and research gap; at least 15 references.}
-% Add real sources to references.bib and cite them with \cite{citationKey}.
-\draftspace{120mm}
-\draftpage
+The evaluation of a social robot should include both the system's performance and the experiences of its users. \citet{fong2003} describe socially interactive robots as systems in which interaction with people is an important part of their design and function. Researchers therefore cannot rely solely on task completion or mechanical accuracy to determine whether an interaction was successful. They must also understand how participants perceive the robot and whether they would want to interact with it again. Standardized instruments such as the Godspeed questionnaires measure perceptions including likability, perceived intelligence, and safety \cite{bartneck2009}. Similarly, the Almere model combines social and functional factors to explain older adults' acceptance of assistive social agents \cite{heerink2010}. These approaches highlight the importance of subjective evaluation while raising questions about the circumstances in which that evaluation is collected.
+
+The context of questionnaire administration is relevant because measurement practices in HRI vary considerably. In a systematic review of 96 self-report measures, \citet{gillespie2026} found that only 14 instruments explicitly specified that a robot should be physically present while participants answered the questions. This finding does not establish that robot presence influences questionnaire responses. However, it highlights the importance of distinguishing what an instrument measures from the conditions under which it is administered. Using the same questionnaire across experimental conditions controls the wording and response options, but it does not necessarily control the social experience of answering the questions.
+
+One potential explanation for context-dependent evaluations comes from research on computers as social actors. \citet{nass2000} reviewed experimental studies demonstrating that people apply social expectations, such as politeness and reciprocity, to computers. These responses do not require users to consciously believe that computers possess human feelings. Instead, familiar social cues can lead people to follow conventions normally associated with interpersonal interaction. In robot evaluation, this creates a possible tension between providing candid feedback and avoiding comments that would seem impolite if directed toward a human interaction partner.
+
+\citet{nass1999} examined this issue directly in two studies of computer-based interviewing. Participants completed a task and then evaluated the computer involved in that task. Evaluations collected through the same computer were more positive and less varied than evaluations collected through alternative methods, such as a different computer or a paper questionnaire. These findings suggest that the apparent recipient of an evaluation can influence its content. However, having a computer ask questions about itself differs from completing an independent questionnaire while the computer remains nearby. Survey research also indicates that reporting errors can depend on perceived privacy and concerns about how responses will be received \cite{tourangeau2007}. Whether similar concerns arise when participants evaluate a nearby robot through a separate survey requires further investigation.
+
+Physical presence must also be distinguished from perceived social presence. \citet{biocca2003} emphasize the importance of developing clear theories and measures of social presence rather than assuming that it is an inherent property of an interface. A robot occupying the same room as a participant is not necessarily experienced as socially attentive or available. Anthropomorphism provides a complementary explanation for why participants might nevertheless interpret the robot as an audience. \citet{epley2007} describe how people attribute humanlike intentions and emotions to nonhuman agents, with these attributions varying across individuals and situations. Applied to the present study, an activated NAO facing the participant might be perceived as socially available even while remaining silent. This possibility provides a theoretical motivation for the experiment rather than an established consequence of the robot's physical presence.
+
+Studies comparing physically present robots with mediated agents demonstrate that sharing space with a robot can affect human responses. \citet{bainbridge2011} found that participants were more likely to comply with an unusual request and afford greater personal space to a physically present robot than to one displayed through live video. \citeauthor{li2015}'s~\cite{li2015} review of 33 experimental studies similarly identified physical presence as an important factor in responses to artificial agents. Related research by \citet{horstmann2018} found that a robot's objection affected participants' willingness to switch it off. Together, these studies show that people can respond socially to robots. However, they do not directly establish that a silent robot's presence changes responses to an independently completed post-interaction questionnaire.
+
+Evidence concerning socially desirable responses to robots is also mixed. \citet{crowell2009} found that responses to embodied and disembodied agents depended on participant sex, voice characteristics, and the type of question being answered. Their findings caution against assuming that embodiment produces the same response across participants and measures. More directly, \citet{leichtmann2021} investigated robot evaluation in a between-subjects study involving 107 participants. Following a conversation with a robot, participants evaluated that experience through the same robot, a different robot, or a tablet. The predicted increases in likability and interaction-quality ratings when the same robot administered the evaluation were not supported. Their findings challenge the assumption that social responses to technology consistently produce more favorable evaluations and support further investigation of the circumstances under which such effects occur.
+
+The present study builds on this literature by examining the robot's presence during evaluation while keeping the questionnaire's administration method consistent. Participants will complete the same general interaction activity with NAO before independently answering a Qualtrics questionnaire. In the Robot Present condition, NAO will remain activated and facing the participant without speaking or engaging in further interaction. In the Robot Absent condition, NAO will be removed before the questionnaire begins. Wizard-of-Oz control provides a way to standardize the preceding activity, although the operator's role and the robot's behavior must still be carefully specified and reported \cite{riek2012}. Comparing numerical ratings and open-ended feedback will allow the study to examine whether responses differ between these evaluation settings. A difference would indicate sensitivity to the evaluation context, but would not, by itself, establish which responses are more truthful or identify social desirability as the sole explanation. The study therefore examines a specific boundary condition in HRI evaluation: whether the continued presence of a robot can influence feedback even when the robot does not administer the questionnaire.
+\draftspace{12mm}
 
 \section{Methods}
 \label{sec:methods}
@@ -114,7 +132,7 @@ effect sizes, p-values, and Cohen's kappa.}
 \draftspace{40mm}
 
 \section{GenAI Use}
-\placeholder{One sentence naming tools and their use, including this starter.}
+OpenAI Codex was used for source identification, Background drafting and revision, and LaTeX preparation; OpenAI image generation was used to create the watercolor illustration.
 % This LaTeX scaffold was generated using OpenAI Codex.
 % The watercolor teaser illustration was generated using OpenAI image generation
 % from the team's study description and supplied NAO reference images.
@@ -122,11 +140,7 @@ effect sizes, p-values, and Cohen's kappa.}
 \draftspace{20mm}
 \draftpage
 
-% After adding real sources and citations, delete the two lines immediately
-% below and uncomment \bibliography{references} to generate the references.
-\section*{References}
-\placeholder{Add verified references.}
 \bibliographystyle{ACM-Reference-Format}
-%\bibliography{references}
+\bibliography{references}
 
 \end{document}
